@@ -1,5 +1,3 @@
-var lpTag = {};
-
 lpTag.identities = [];
 lpTag.identities.push(identifyFn);
 console.log(lpTag.identities);
