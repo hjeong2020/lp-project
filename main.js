@@ -17,14 +17,14 @@ function authenticate(callback) {
 }
 
 const cartValue = "1000"
-const tTl = document.title;
+const title = document.title;
 
 var lpTag = window.lpTag || {};
 lpTag.sdes = lpTag.sdes || [];
 var data = {
-    type: "cart",
-    cart: cartValue,
-    title: tTl
+    "type": "cart",
+    "total": 11.7,
+    "title": title
 }
 console.log(data);
 console.log(cartValue);
