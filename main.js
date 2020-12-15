@@ -26,7 +26,9 @@ var data = {
     "total": 11.7,
     "title": title
 }
+;
 console.log(data);
 console.log(cartValue);
-var fun = function () { };
+lpTag.sdes.push(data);
+var fun = function () { lpTag.sdes.push(data)};
 lpTag.sdes.send(data, fun);
