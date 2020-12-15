@@ -16,14 +16,14 @@ function authenticate(callback) {
     callback(jwt)
 }
 
-const cartValue = document.getElementById("cart").value;
+const cartValue = "1000"
 const tTl = document.title;
 
 var lpTag = window.lpTag || {};
 lpTag.sdes = lpTag.sdes || [];
 var data = {
     type: "cart",
-    cart: "1000",
+    cart: cartValue,
     title: tTl
 }
 console.log(data);
