@@ -16,13 +16,17 @@ function authenticate(callback) {
     callback(jwt)
 }
 
+const cartValue = document.getElementById("cart").value;
+const tTl = document.title;
+
 var lpTag = window.lpTag || {};
 lpTag.sdes = lpTag.sdes || [];
 var data = {
     type: "cart",
-    cart: choice.itemPrice,
-    title: document.title
+    cart: "1000",
+    title: tTl
 }
 console.log(data);
+console.log(cartValue);
 var fun = function () { };
 lpTag.sdes.send(data, fun);
