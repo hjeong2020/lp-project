@@ -39,11 +39,11 @@
         header {
             margin-top: 100px;
         }
-        table, th, td {
+/*         table, th, td {
         border-bottom: 1px solid #ddd;
         border-collapse: collapse;
         padding: 15px;
-       }
+       } */
     </style>
 </head>
 
@@ -51,7 +51,7 @@
     
         <div class="container mt-10">
             <div id="app"><h4 style="color:blue; text-align: center;" >Order Your Jewelry</h4></div>
-            <table class="table">
+            <table class="table table-dark">
               <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -65,25 +65,25 @@
                   <th scope="row">1</th>
                   <td><img src="ring.jpg" alt="ring" width="100" height="100"></td>
                   <td>Ring</td>
-                  <td>$3000<button onclick="myFunction(3000)">Add</button></td>
+                  <td>$3000<button class="btn btn-warn" onclick="myFunction(3000)">Add</button></td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
                   <td><img src="bracelet.jpg" alt="bracelet" width="100" height="100"></td>
                   <td>Bracelet</td>
-                  <td>$2000<button onclick="myFunction(2000)">Add</button></td>
+                  <td>$2000<button class="btn btn-warn" onclick="myFunction(2000)">Add</button></td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
                   <td><img src="earring.jpg" alt="earrings" width="100" height="100"></td>
                   <td>Earrings</td>
-                  <td>$1000<button onclick="myFunction(1000)">Add</button></td>
+                  <td>$1000<button class="btn btn-warn" onclick="myFunction(1000)">Add</button></td>
                 </tr>
                 <tr>
                   <th scope="row">4</th>
                   <td><img src="necklace.jpg" alt="necklace" width="100" height="100"></td>
                   <td>Necklace</td>
-                  <td>$5000<button onclick="myFunction(5000)">Add</button></td>
+                  <td>$5000<button class="btn btn-warn" onclick="myFunction(5000)">Add</button></td>
                 </tr>
               </tbody>
             </table>
