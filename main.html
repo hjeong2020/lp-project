@@ -81,7 +81,7 @@
                   <td>$1000<button onclick="myFunction(1000)">Add</button></td>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
+                  <th scope="row">4</th>
                   <td><img src="necklace.jpg" alt="necklace" width="100" height="100"></td>
                   <td>Necklace</td>
                   <td>$5000<button onclick="myFunction(5000)">Add</button></td>
@@ -102,9 +102,8 @@
    <script>
                                       
     function myFunction(val) {
-      const cartValue = 0;
       document.getElementById("cart").innerHTML = val;
-      cartValue = val;
+      const cartValue = val;
       console.log(val);
       console.log("cart value is "+cartValue);
       const title = document.title;
