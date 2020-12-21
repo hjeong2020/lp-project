@@ -18,7 +18,8 @@ function authenticate(callback) {
 
 const cartValue = "1000"
 const title = document.title;
-
+var x = document.getElementById("myText").value;
+console.log("myText is ............"+x);
 var lpTag = window.lpTag || {};
 lpTag.sdes = lpTag.sdes || [];
 var data = {
