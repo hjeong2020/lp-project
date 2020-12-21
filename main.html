@@ -13,25 +13,24 @@
     <!--<script type="text/javascript" src="main.js"></script> -->
     <script>
         lpTag.identities = []
-lpTag.identities.push(identifyFn);
-console.log(lpTag.identities[0])
-//const cartValue = "1000"
+        lpTag.identities.push(identifyFn);
+        console.log(lpTag.identities[0])
+        //const cartValue = "1000"
 
-function identifyFn(callback) {
-    callback({
-        iss: 'LP-Brand',
-        acr: 'loa1',
-        sub: "1234567890"
-    })
-}
+        function identifyFn(callback) {
+            callback({
+                iss: 'LP-Brand',
+                acr: 'loa1',
+                sub: "1234567890"
+            })
+        }
 
 
-function authenticate(callback) {
-    console.log("The Authenticate function has been called");
-    const jwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaXNzIjoiTFAtQnJhbmQiLCJhdWQiOiJhY2M6cWE1NzIyMTY3NiIsImV4cCI6MTY2MTk3NTMzMiwiaWF0IjoxNjA4MDYxNzMyfQ.tKAkTYD_rSBrlvBbz5tYbOX3tSW4-cNfuQ5rpVx5-hQ5RvMMPlYp1KqlYQf9vEIL7Ou2YTuOkyOiINjRrKKje9hp_g-p5wzv5ttfpdttg7WRvJP2EuMPutM9gFFu1wwqLyyPwPgb-7gkVF6h5SvXQONsnGa927lXD1NUV2DN-mQ";
-    callback(jwt)
-}
-
+        function authenticate(callback) {
+            console.log("The Authenticate function has been called");
+            const jwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaXNzIjoiTFAtQnJhbmQiLCJhdWQiOiJhY2M6cWE1NzIyMTY3NiIsImV4cCI6MTY2MTk3NTMzMiwiaWF0IjoxNjA4MDYxNzMyfQ.tKAkTYD_rSBrlvBbz5tYbOX3tSW4-cNfuQ5rpVx5-hQ5RvMMPlYp1KqlYQf9vEIL7Ou2YTuOkyOiINjRrKKje9hp_g-p5wzv5ttfpdttg7WRvJP2EuMPutM9gFFu1wwqLyyPwPgb-7gkVF6h5SvXQONsnGa927lXD1NUV2DN-mQ";
+            callback(jwt)
+        }
 
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -40,10 +39,50 @@ function authenticate(callback) {
         header {
             margin-top: 100px;
         }
+        table, th, td {
+        border-bottom: 1px solid #ddd;
+        border-collapse: collapse;
+        padding: 15px;
+        width:100%;
+       }
     </style>
 </head>
 
 <body>
+    
+        <div class="container mt-10">
+            <div id="app"><h4 style="color:blue; text-align: center;" >Order Your Jewelry</h4></div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Order</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td><img src="ring.jpg" alt="ring" width="200" height="200"></td>
+                  <td>Ring</td>
+                  <td>$3000<button onclick="myFunction()">Add</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+      <div style="color:red;" id="errorMessage"></div>
+        </div>
     <header class="text-center">
         <div className="card" style="width: 18rem;">
             <div className="card-body">
