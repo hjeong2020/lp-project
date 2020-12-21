@@ -1,6 +1,11 @@
 lpTag.identities = []
 lpTag.identities.push(identifyFn);
 console.log(lpTag.identities[0])
+const cartValue = "1000"
+const title = document.title;
+var x = document.getElementById("myText").value;
+console.log("myText is ............"+x);
+
 function identifyFn(callback) {
     callback({
         iss: 'LP-Brand',
@@ -16,10 +21,8 @@ function authenticate(callback) {
     callback(jwt)
 }
 
-const cartValue = "1000"
-const title = document.title;
-var x = document.getElementById("myText").value;
-console.log("myText is ............"+x);
+
+
 var lpTag = window.lpTag || {};
 lpTag.sdes = lpTag.sdes || [];
 var data = {
