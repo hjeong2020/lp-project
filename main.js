@@ -32,3 +32,7 @@ console.log(cartValue);
 lpTag.sdes.push(data);
 var fun = function () { lpTag.sdes.push(data)};
 lpTag.sdes.send(data, fun);
+
+function myFunction(val) {
+  alert("The input value has changed. The new value is: " + val);
+}
