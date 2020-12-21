@@ -97,18 +97,33 @@
                 <p class="card-text text-warning bg-dark"">Please Go to the Unauthenticated Page</p>
                 <a href=" index.html" class="btn btn-primary">Click Here</a>
             </div>
-
-
-<script>
-    var cartValue = 0;                                   
+        </div>        
+    </header>
+   <script>
+                                      
     function myFunction(val) {
+      const cartValue = 0;
       document.getElementById("cart").innerHTML = val;
       cartValue = val;
       console.log(val);
+      console.log("cart value is "+cartValue);
+      const title = document.title;
+
+      var lpTag = window.lpTag || {};
+      lpTag.sdes = lpTag.sdes || [];
+      var data = {
+          "type": "cart",
+          "total": cartValue,
+          "title": title
+      };
+      console.log(data);
+      lpTag.sdes.push(data);
+      var fun = function () { lpTag.sdes.push(data)};
+      lpTag.sdes.send(data, fun);
       
     }
     
-    console.log("cart value is "+cartValue);
+    <!--console.log("cart value is "+cartValue);
     const title = document.title;
 
     var lpTag = window.lpTag || {};
@@ -123,12 +138,8 @@
     console.log(cartValue);
     lpTag.sdes.push(data);
     var fun = function () { lpTag.sdes.push(data)};
-    lpTag.sdes.send(data, fun);
-</script>
-        </div>
-        
-    </header>
-                                                  
+    lpTag.sdes.send(data, fun); -->
+</script>                                        
 </body>
 
 </html>
