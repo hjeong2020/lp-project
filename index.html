@@ -16,17 +16,86 @@
         header {
             margin-top: 100px;
         }
+/*         table, th, td {
+        border-bottom: 1px solid #ddd;
+        border-collapse: collapse;
+        padding: 15px;
+       } */
     </style>
 </head>
-  <body>
-    <header class="text-center">
-      <div className="card" style="width: 18rem;">
+
+<body>
+    <header>
+        <div class="container mt-10">
+            <br><br>
+            <div id="app"><h4 style="color:blue; text-align: center;" >Order Your Jewelry</h4></div>
+            <table class="table table-light table-borderless">
+              <thead>
+                <tr>
+                  <th scope="col">Ring</th>
+                  <th scope="col">Bracelet</th>
+                  <th scope="col">Earrings</th>
+                  <th scope="col">Necklace</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row"><img src="ring.jpg" alt="ring" width="200" height="200"></td>
+                  <td><img src="bracelet.jpg" alt="bracelet" width="200" height="200"></td>
+                  <td><img src="earring.jpg" alt="earrings" width="200" height="200"></td>
+                  <td><img src="necklace.jpg" alt="necklace" width="200" height="200"></td>
+                </tr>
+                <tr>
+                  <td scope="row">$2,000</td>
+                  <td>$3,000</td>
+                  <td>$4,000</td>
+                  <td>$5,000</td>
+                </tr>
+                <tr>
+                  <td scope="row"><button type="button" class="btn btn-warning text-white" onclick="myFunction(2000)">Add</button></td>
+                  <td><button type="button" class="btn btn-warning text-white" onclick="myFunction(3000)">Add</button></td>
+                  <td><button type="button" class="btn btn-warning text-white" onclick="myFunction(4000)">Add</button></td>
+                  <td><button type="button" class="btn btn-warning text-white" onclick="myFunction(5000)">Add</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-success"><h5>The cart is $  <span id="cart" name="cart" ></span></h5></div>
+            
+            <div className="card" style="width: 18rem;">
         <div className="card-body">
           <h5 class="card-title">Unauthenticated Page</h5>
           <p class="card-text">Please Go to the Authenticated Page</p>
           <a href="main.html" class="btn btn-primary">Click Here</a>
         </div>
       </div>
+        </div><br><br>
+         
+      
     </header>
+   <script>
+                                      
+    function myFunction(val) {
+      document.getElementById("cart").innerHTML = val;
+      const cartValue = val;
+      console.log(val);
+      console.log("cart value is "+cartValue);
+      const title = document.title;
+
+      var lpTag = window.lpTag || {};
+      lpTag.sdes = lpTag.sdes || [];
+      var data = {
+          "type": "cart",
+          "total": cartValue,
+          "title": title
+      };
+      console.log(data);
+      lpTag.sdes.push(data);
+      var fun = function () { lpTag.sdes.push(data)};
+      lpTag.sdes.send(data, fun);
+      
+    }
+    
+    
+</script>  
   </body>
 </html>
